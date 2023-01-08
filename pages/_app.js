@@ -1,5 +1,21 @@
-import '../styles/globals.css'
+import Head from "next/head";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "../styles/style.scss";
+import FullLayout from "../src/layouts/FullLayout";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Head>
+        <title>Lund Exercise</title>
+        <meta name="description" content="Recordkeeping for Lund family exercise goals" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <FullLayout>
+        <Component {...pageProps} />
+      </FullLayout>
+    </>
+  )
 }
+
+export default MyApp
