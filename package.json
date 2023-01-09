@@ -9,11 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mui/material": "^5.11.3",
     "@next/font": "13.1.1",
+    "axios": "^1.2.2",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
+    "link": "^1.5.1",
+    "moment": "^2.29.4",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "next": "13.1.1",
+    "path": "^0.12.7",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "^18.2.0",
+    "reactstrap": "^9.1.5",
+    "sass": "^1.57.1"
   }
 }

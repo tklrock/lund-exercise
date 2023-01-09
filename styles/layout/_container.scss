@@ -1,0 +1,195 @@
+.pageWrapper {
+  min-height: 100vh;
+}
+.contentArea {
+  flex-grow: 1;
+}
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.card {
+  margin-bottom: 30px;
+  box-shadow: $box-shadow;
+}
+.dropdown-menu {
+  box-shadow: $box-shadow;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.circle-box {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 100%;
+  &.lg-box {
+    width: 60px;
+    height: 60px;
+    font-size: 21px;
+    line-height: 60px;
+  }
+  &.md-box {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+  }
+}
+.button-group .btn {
+  margin: 3px;
+}
+.btn-white {
+  border: 1px solid $border-color;
+}
+.simplebar-scrollbar:before {
+  background: #a0a0a0;
+}
+.apexcharts-toolbar {
+  z-index: 0 !important;
+}
+.cardHover:hover {
+  background: linear-gradient(rgba(14, 119, 247, 0.651), rgba(105, 169, 247, 0.627));
+  box-shadow: 10px 10px;
+}
+.songCard {
+  background: linear-gradient(#8cbd96ce,#fcf9f9bd,#d87e7ec6);
+}
+.songCard:hover {
+  box-shadow: 10px 10px;
+}
+.spotifyImg {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 10px;
+}
+.spotify:hover .spotifyImg{
+  border-style: solid;
+  border-color: black;
+  border-width: 3pt;
+  border-radius: 100%
+}
+.storyDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px;    
+  max-height: 120px;     
+  -webkit-line-clamp: 6; /* Write the number of 
+                            lines you want to be 
+                            displayed */
+  -webkit-box-orient: vertical;
+  font-size: 14pt;
+}
+
+.bookLink {
+  font-size: 48pt;
+  color: black;
+  text-decoration: none;
+}
+.bookLink:hover {
+  color: rgb(14, 119, 247);
+}
+
+.movieLink {
+  font-size: 48pt;
+  color: black;
+  text-decoration: none;
+}
+.movieLink:hover {
+  color: rgb(14, 119, 247);
+}
+
+h1 {
+  font-size: 60px;
+}
+
+
+
+@font-face {
+  font-family: CandyStriped;
+  src: url("/fonts/KGHardCandyStriped.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Christmas;
+  src: url("/fonts/ChristmasBell.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Solway;
+  src: url("/fonts/Solway-Regular.ttf") format("opentype");
+}
+
+h1 {
+  font-family: CandyStriped;
+  color: red;
+  font-size: 60px;
+}
+
+.heading {
+  font-family: Christmas;
+  font-size: 80px;
+  color: whitesmoke
+}
+
+.subtitle {
+  font-family: Solway;
+  font-size: 20px;
+  color: whitesmoke
+}
+
+.banner-bg {
+  background-image: url('/img/ornamentbg.jpg');
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px
+}
+
+.lights-bg-styles {
+  background-image: url('/img/ChristmasLights.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+  align-items: center
+}
+
+.icon-styles {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: black;
+  border-width: 3px;
+  border-style: solid
+}
+
+.icon-styles:hover {
+  border-width: 4px;
+}
+
+.icon-red {
+  background-color: rgb(255, 54, 54);
+}
+
+.icon-green {
+  background-color: rgb(4, 185, 4);
+}
+
+.icon-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.icon-link:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
