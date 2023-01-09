@@ -23,7 +23,7 @@ const People = () => {
                 <div style={{display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>
                     {people.map(person => (
                         // <Link key={movie.movie_id} href={`movies/${encodeURIComponent(movie.movie_id.toString())}`} className="text-black text-decoration-none" style={{width:'400px'}}>
-                        <div key={person.person_id} style={{width:'40%'}}>
+                        <div key={person.person_id} style={{width:'40%', minWidth:'300px', maxWidth:'90%'}}>
                             <PersonCard  person = {person}/>
                         </div>
                         // </Link>

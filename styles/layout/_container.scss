@@ -50,7 +50,7 @@
   z-index: 0 !important;
 }
 .cardHover:hover {
-  background: linear-gradient(#d83d3d, #f0ececbd,#6fba7f);
+  background: linear-gradient(rgba(14, 119, 247, 0.651), rgba(105, 169, 247, 0.627));
   box-shadow: 10px 10px;
 }
 .songCard {
@@ -102,14 +102,7 @@
   color: rgb(14, 119, 247);
 }
 
-@font-face {
-  font-family: CandyStriped;
-  src: url("/fonts/KGHardCandyStriped.otf") format("opentype");
-}
-
 h1 {
-  font-family: CandyStriped;
-  color: red;
   font-size: 60px;
 }
 

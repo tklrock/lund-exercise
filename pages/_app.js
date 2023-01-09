@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Lund Exercise</title>
-        <meta name="description" content="Recordkeeping for Lund family exercise goals" />
+        <meta name="description" content="Record keeping for Lund family exercise goals" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <FullLayout>

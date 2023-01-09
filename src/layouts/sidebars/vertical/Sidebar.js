@@ -4,46 +4,46 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const navigation = [
+  // {
+  //   title: "Movies",
+  //   href: "/ui/movies",
+  //   icon: "bi bi-film",
+  // },
+  // {
+  //   title: "Music",
+  //   href: "/ui/songs",
+  //   icon: "bi bi-music-note-beamed",
+  // },
+  // {
+  //   title: "Stories",
+  //   href: "/ui/stories",
+  //   icon: "bi bi-book",
+  // },
   {
-    title: "Home",
+    title: "Log",
     href: "/",
-    icon: "bi bi-house",
-  },
-  {
-    title: "Movies",
-    href: "/ui/movies",
-    icon: "bi bi-film",
-  },
-  {
-    title: "Music",
-    href: "/ui/songs",
-    icon: "bi bi-music-note-beamed",
-  },
-  {
-    title: "Stories",
-    href: "/ui/stories",
-    icon: "bi bi-book",
-  },
-  {
-    title: "Elf Yourself",
-    href: "/ui/elf",
-    icon: "bi bi-person-circle",
-  },
-  {
-    title: "Calendar",
-    href: "/ui/calendar",
     icon: "bi bi-calendar-date",
   },
   {
-    title: "Wishlist",
-    href: "/ui/wishlist",
-    icon: "bi bi-list-stars",
+    title: "People",
+    href: "/people",
+    icon: "bi bi-person-circle",
   },
   {
-    title: "Advent",
-    href: "/ui/advent",
-    icon: "bi bi-calendar-heart",
+    title: "About",
+    href: "/about",
+    icon: "bi bi-house",
   },
+  // {
+  //   title: "Wishlist",
+  //   href: "/ui/wishlist",
+  //   icon: "bi bi-list-stars",
+  // },
+  // {
+  //   title: "Advent",
+  //   href: "/ui/advent",
+  //   icon: "bi bi-calendar-heart",
+  // },
 ];
 
 const Sidebar = ({ showMobilemenu }) => {

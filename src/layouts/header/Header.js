@@ -15,8 +15,8 @@ import {
   Button,
 } from "reactstrap";
 // import LogoWhite from "../../assets/images/logos/monsterlogowhite.svg";
-import IconClear from "../../assets/images/logos/icon-no-background.png"
-import user1 from "../../assets/images/users/user1.jpg";
+import IconClear from "../../assets/images/logos/icon.png"
+import user2 from "../../assets/images/users/user2.jpg";
 
 const Header = ({ showMobmenu }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -76,11 +76,11 @@ const Header = ({ showMobmenu }) => {
             </DropdownMenu>
           </UncontrolledDropdown> */}
         </Nav>
-        <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+        {/* <Dropdown isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle color="secondary">
             <div style={{ lineHeight: "0px" }}>
               <Image
-                src={user1}
+                src={user2}
                 alt="profile"
                 className="rounded-circle"
                 width="30"
@@ -97,7 +97,7 @@ const Header = ({ showMobmenu }) => {
             <DropdownItem>Inbox</DropdownItem>
             <DropdownItem>Logout</DropdownItem>
           </DropdownMenu>
-        </Dropdown>
+        </Dropdown> */}
       </Collapse>
     </Navbar>
   );

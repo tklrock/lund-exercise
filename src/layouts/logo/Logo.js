@@ -1,4 +1,4 @@
-import LogoClear from "../../assets/images/logos/LogoNoBackground.svg";
+import LogoClear from "../../assets/images/logos/full_logo.png";
 import Image from "next/image";
 import Link from "next/link";
 
