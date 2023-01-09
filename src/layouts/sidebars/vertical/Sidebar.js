@@ -29,11 +29,11 @@ const navigation = [
     href: "/people",
     icon: "bi bi-person-circle",
   },
-  {
-    title: "About",
-    href: "/about",
-    icon: "bi bi-house",
-  },
+  // {
+  //   title: "About",
+  //   href: "/about",
+  //   icon: "bi bi-house",
+  // },
   // {
   //   title: "Wishlist",
   //   href: "/ui/wishlist",
