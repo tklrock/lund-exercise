@@ -68,7 +68,9 @@ const AddSession = () => {
                 <Label for="Name"><b>Name:</b></Label><br/>
                 <Input type="text" id="Name" name="Name" onChange={handleChange}></Input><br/>
                 <Label for="Date">Date:</Label><br/>
-                <Input type="date" id="Date" name="Date" onChange={handleChange}></Input><br/>
+                <Input type="date" id="Date" name="Date" onChange={handleChange} 
+                    // defaultValue={new Date().toLocaleDateString('en-CA', {timeZone: 'America/New_York'})}
+                ></Input><br/>
                 <Label for="Minutes" >Minutes:</Label><br/>
                 <Input type="number" step='1' min='0' placeholder='30' id="Minutes" name="Minutes" onChange={handleChange}></Input><br/>
                 <Label for="Category" >Category:</Label><br/>
@@ -76,6 +78,8 @@ const AddSession = () => {
                 <Label for="Notes">Notes:</Label><br/>
                 <Input type="textarea" id="Notes" name="Notes" onChange={handleChange}></Input><br/>
                 <Button color="success" onClick={submitSession}>Submit</Button>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <Button color="secondary" >Cancel</Button>
             </Form>        
         </>
     )
