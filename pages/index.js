@@ -50,7 +50,7 @@ return (
                 <div class="container">
                     <div class="row">
                         <div class="col-4"><h4>Total sessions: <span className="h3">{sessions?.length}</span></h4></div>
-                        <div class="col-4"><h4>Total time: <span className="h3">{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) / 60).toFixed(0)}:{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) % 60).toString().padStart(2, '0')}</span></h4></div>
+                        <div class="col-4"><h4>Total time: <span className="h3">{parseInt((sessions?.reduce((accum,session) => accum + session.minutes, 0) / 60), 10)}:{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) % 60).toString().padStart(2, '0')}</span></h4></div>
                         <div class="col-4"><h4>Average minutes: <span className="h3">{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) / sessions?.length).toFixed(1)}</span></h4></div>
                         {/* <div class="col-6"><h4>Total Price: ${items.reduce((partialSum, item) => partialSum + parseFloat(item.price), 0).toFixed(2)}</h4></div> */}
                     </div>
