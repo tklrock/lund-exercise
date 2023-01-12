@@ -65,23 +65,20 @@ const Song = () => {
             .then((response) => {
                 setSession(response.data.results[0]);
 
-                let date = new Date(response.data.results[0].date);
-
-                //use method getDate() , getMonth, getFullYear 
-                let dd = date.getDate().toString(); 
-                let mm = (date.getMonth() + 1).toString();
-                let yyyy= date.getFullYear();
-                
-                //we will insert 0 and month if the month is less than 10 (mean length <2)
-                if (mm.length < 2) {
-                    mm = '0' + mm;
-                }
-
-                if (dd.length < 2) {
-                    dd = '0' + dd;
-                }
-
-                setOriginalDate([yyyy, mm, dd].join('-'));
+                // let date = new Date(response.data.results[0].date).toLocaleDateString('', {timeZone: 'UTC'});
+                // //use method getDate() , getMonth, getFullYear 
+                // let dd = date.getDate().toString(); 
+                // let mm = (date.getMonth() + 1).toString();
+                // let yyyy= date.getFullYear();
+                // //we will insert 0 and month if the month is less than 10 (mean length <2)
+                // if (mm.length < 2) {
+                //     mm = '0' + mm;
+                // }
+                // if (dd.length < 2) {
+                //     dd = '0' + dd;
+                // }
+                // setOriginalDate([yyyy, mm, dd].join('-'));
+                setOriginalDate(new Date(response.data.results[0].date).toISOString().split('T')[0])
 
                 setState({
                         Name: response.data.results[0].name,
