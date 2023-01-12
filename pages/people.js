@@ -3,6 +3,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import path from 'path';
 import { PersonCard } from '../components/Custom/personCard';
+import { Button } from 'reactstrap';
 
 const People = () => {
 
@@ -18,13 +19,16 @@ const People = () => {
     return (
         <>
             <h1>People</h1>
+            
+            <Link href={`addPerson`}><Button color="success"><span className="h5">Sign Up <b>+</b></span></Button></Link>
+            <br />
             {people?.length > 0 
             ? (
                 <div style={{display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>
                     {people.map(person => (
                         // <Link key={movie.movie_id} href={`movies/${encodeURIComponent(movie.movie_id.toString())}`} className="text-black text-decoration-none" style={{width:'400px'}}>
                         <div key={person.person_id} style={{width:'40%', minWidth:'300px', maxWidth:'90%'}}>
-                            <PersonCard  person = {person}/>
+                            <PersonCard  person={person} />
                         </div>
                         // </Link>
                         // <>

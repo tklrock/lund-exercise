@@ -102,30 +102,12 @@
   color: rgb(14, 119, 247);
 }
 
-h1 {
-  font-size: 60px;
-}
-
-
-
-@font-face {
-  font-family: CandyStriped;
-  src: url("/fonts/KGHardCandyStriped.otf") format("opentype");
-}
-
-@font-face {
-  font-family: Christmas;
-  src: url("/fonts/ChristmasBell.otf") format("opentype");
-}
-
 @font-face {
   font-family: Solway;
   src: url("/fonts/Solway-Regular.ttf") format("opentype");
 }
 
 h1 {
-  font-family: CandyStriped;
-  color: red;
   font-size: 60px;
 }
 

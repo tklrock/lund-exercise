@@ -1,5 +1,25 @@
-import { Progress } from "reactstrap";
+import React, { useState, useEffect } from "react";
+import path from 'path';
+import axios from 'axios';
+// import { Progress } from "reactstrap";
 export const PersonCard = ({person}) => {
+
+    const [latestSession, setLatestSession] = useState('');
+
+    React.useEffect(() => {
+        // console.log(person.first_name);
+        const baseURL = path.join(process.cwd(), 'api');
+        axios.post(path.join(baseURL, 'latestSession'), {
+            name: person.first_name       
+        }).then((response) => {
+            // console.log(new Date(response.data.results[0].latest_session).toLocaleDateString('en-US', {timeZone: 'UTC'}));
+            if(response.data.results[0].latest_session !== null){
+                setLatestSession(new Date(response.data.results[0].latest_session).toLocaleDateString('en-US', {timeZone: 'UTC'}))
+            } else {
+                setLatestSession('Not yet!')
+            }
+        });
+    }, []);
 
     return (
         <>
@@ -16,8 +36,8 @@ export const PersonCard = ({person}) => {
                         <>
                         <div className="col-6">
                         <h4><b>Goal: </b> {person.goal}</h4>
-                        <br />
-                        <h5><b>Last Exercise: </b></h5>
+                        {/* <br /> */}
+                        <h5><b>Last Exercise: </b>{latestSession}</h5>
                         </div>
                         <div className="col-4">
                             
@@ -29,7 +49,7 @@ export const PersonCard = ({person}) => {
                         <div className="col-10">
                         <h4><b>Goal: </b> {person.goal}</h4>
                         <br />
-                        <h5><b>Last Exercise: </b></h5>
+                        <h5><b>Last Exercise: </b>{latestSession}</h5>
                         </div>
                         </>
                     )}
