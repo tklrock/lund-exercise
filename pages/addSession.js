@@ -8,8 +8,8 @@ import {
     Input,
     Label,
   } from 'reactstrap';
-  import Link from 'next/link';
-  import FlashMessage from 'react-flash-message';
+import Link from 'next/link';
+import FlashMessage from 'react-flash-message';
   
 
 const AddSession = () => {
