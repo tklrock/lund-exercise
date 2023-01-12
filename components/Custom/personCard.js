@@ -41,7 +41,7 @@ export const PersonCard = ({person}) => {
                         </div>
                         <div className="col-4">
                             
-                            <img src={person.image_link} className="w-100 m-1 rounded-circle border border-2 border-dark"/>
+                            <img src={person.image_link} className="w-100 m-1 rounded-circle border border-2 border-dark" onError={() => person.image_link = ''}/>
                         </div>
                         </>
                     ) : (

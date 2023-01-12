@@ -94,7 +94,7 @@ const AddSession = () => {
                     {/* <span className="text-muted">(Leave blank for today)</span> */}
                 </Label><br/>
                 <Input type="date" id="Date" name="Date" onChange={handleChange} 
-                    // defaultValue={new Date().toLocaleDateString('en-CA', {timeZone: 'America/New_York'})}
+                    defaultValue={new Date().toISOString().split('T')[0]}
                 ></Input><br/>
                 <Label for="Minutes" >Minutes:</Label><br/>
                 <Input type="number" step='1' min='0' placeholder='30' id="Minutes" name="Minutes" onChange={handleChange}></Input><br/>
