@@ -90,7 +90,9 @@ const AddSession = () => {
             <Form>
                 <Label for="Name"><b>Name:</b></Label><br/>
                 <Input type="text" id="Name" name="Name" onChange={handleChange}></Input><br/>
-                <Label for="Date">Date: <span className="text-muted">(Leave blank for today)</span></Label><br/>
+                <Label for="Date">Date: 
+                    {/* <span className="text-muted">(Leave blank for today)</span> */}
+                </Label><br/>
                 <Input type="date" id="Date" name="Date" onChange={handleChange} 
                     // defaultValue={new Date().toLocaleDateString('en-CA', {timeZone: 'America/New_York'})}
                 ></Input><br/>
