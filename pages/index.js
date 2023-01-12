@@ -47,12 +47,12 @@ return (
         {sessions?.length > 0  
         ? (
             <>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-4"><h4>Total sessions: <span className="h3">{sessions?.length}</span></h4></div>
-                        <div class="col-4"><h4>Total time: <span className="h3">{parseInt((sessions?.reduce((accum,session) => accum + session.minutes, 0) / 60), 10)}:{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) % 60).toString().padStart(2, '0')}</span></h4></div>
-                        <div class="col-4"><h4>Average minutes: <span className="h3">{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) / sessions?.length).toFixed(1)}</span></h4></div>
-                        {/* <div class="col-6"><h4>Total Price: ${items.reduce((partialSum, item) => partialSum + parseFloat(item.price), 0).toFixed(2)}</h4></div> */}
+                <div className="container">
+                    <div className="row">
+                        <div className="col-4"><h4>Total sessions: <span className="h3">{sessions?.length}</span></h4></div>
+                        <div className="col-4"><h4>Total time: <span className="h3">{parseInt((sessions?.reduce((accum,session) => accum + session.minutes, 0) / 60), 10)}:{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) % 60).toString().padStart(2, '0')}</span></h4></div>
+                        <div className="col-4"><h4>Average minutes: <span className="h3">{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) / sessions?.length).toFixed(1)}</span></h4></div>
+                        {/* <div className="col-6"><h4>Total Price: ${items.reduce((partialSum, item) => partialSum + parseFloat(item.price), 0).toFixed(2)}</h4></div> */}
                     </div>
                 </div>
                 <table className="w-100 table table-hover border border-dark border-2 rounded-5">
@@ -63,7 +63,7 @@ return (
                             <th style={{width:'10%', margin:'1%'}}>Length (min)</th>
                             <th style={{width:'10%', margin:'1%'}}>Category</th>
                             <th style={{width:'20%', margin:'1%'}}>Notes</th>
-                            {/* <th style={{width:'5%', margin:'1%'}}>Edit</th> */}
+                            <th style={{width:'5%', margin:'1%'}}>Edit</th>
                             <th style={{width:'5%', margin:'1%'}}>Delete</th>
                         </tr>
                     </thead>
@@ -75,8 +75,8 @@ return (
                         <td style={{width:'10%', margin:'1%'}}>{session.minutes}</td>
                         <td style={{width:'15%', margin:'1%'}}>{session.category}</td>
                         <td style={{width:'20%', margin:'1%'}}>{session.notes}</td>
-                        {/* <td style={{width:'5%', margin:'1%', fontWeight:'bold'}} className="font-weight-bold h3 text-center"><Button color="warning" onClick={() => editSession(session.session_id)}><i class="bi bi-pencil-square"></i></Button></td> */}
-                        <td style={{width:'5%', margin:'1%', fontWeight:'bold'}} className="font-weight-bold h3 text-center"><Button color="danger" onClick={() => deleteSession(session.session_id)}><i class="bi bi-trash3-fill"></i></Button></td>
+                        <td style={{width:'5%', margin:'1%', fontWeight:'bold'}} className="font-weight-bold h3 text-center"><Link href={`editSession/${session.session_id}`}><Button color="warning"><i className="bi bi-pencil-square"></i></Button></Link></td>
+                        <td style={{width:'5%', margin:'1%', fontWeight:'bold'}} className="font-weight-bold h3 text-center"><Button color="danger" onClick={() => deleteSession(session.session_id)}><i className="bi bi-trash3-fill"></i></Button></td>
                     </tr>
                 ))}
                     </tbody>
