@@ -15,7 +15,7 @@ import FlashMessage from 'react-flash-message';
 const AddSession = () => {
     const [state, setState] = React.useState({
         Name: "",
-        Date: new Date(),
+        Date: new Date().toISOString().split('T')[0],
         Minutes: 0,
         Category: "",
         Notes: ""
@@ -35,6 +35,7 @@ const AddSession = () => {
     const submitSession = async () => {
         try {
             setSuccessMessage(false);
+            console.log(state.Date);
 
             // console.log(state);
             const baseURL = path.join(process.cwd(), 'api');
@@ -51,7 +52,7 @@ const AddSession = () => {
             });
             setState({
                 Name: "",
-                Date: new Date(),
+                Date: new Date().toISOString().split('T')[0],
                 Minutes: 0,
                 Category: "",
                 Notes: ""

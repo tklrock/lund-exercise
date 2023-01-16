@@ -6,7 +6,6 @@ import { Col, Row } from "reactstrap";
 import React, { useState } from 'react'
 import path from 'path';
 import { Button } from 'reactstrap';
-import Moment from 'moment';
 
 
 const Home = () => {
