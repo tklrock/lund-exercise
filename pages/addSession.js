@@ -10,12 +10,16 @@ import {
   } from 'reactstrap';
 import Link from 'next/link';
 import FlashMessage from 'react-flash-message';
+import moment from 'moment/moment';
   
 
 const AddSession = () => {
+
+    const today = moment().format();
+
     const [state, setState] = React.useState({
         Name: "",
-        Date: new Date().toISOString().split('T')[0],
+        Date: new Date(today).getFullYear() + '-' + new Date(today).getMonth()+1 + '-' + new Date(today).getDate(),
         Minutes: 0,
         Category: "",
         Notes: ""
@@ -24,6 +28,7 @@ const AddSession = () => {
     const [successMessage, setSuccessMessage] = React.useState(false);
 
     function handleChange(evt) {
+        // console.log(new Date(today).getFullYear() + '-' + new Date(today).getMonth()+1 + '-' + new Date(today).getDate());
         const value = evt.target.value;
         setState({
           ...state,
@@ -52,13 +57,13 @@ const AddSession = () => {
             });
             setState({
                 Name: "",
-                Date: new Date().toISOString().split('T')[0],
+                Date: new Date(today).getFullYear() + '-' + new Date(today).getMonth()+1 + '-' + new Date(today).getDate(),
                 Minutes: 0,
                 Category: "",
                 Notes: ""
             });
             document.getElementById("Name").value = "";
-            document.getElementById("Date").value = "";
+            document.getElementById("Date").value = new Date(today).getFullYear() + '-' + new Date(today).getMonth()+1 + '-' + new Date(today).getDate();
             document.getElementById("Minutes").value = "";
             document.getElementById("Category").value = "";
             document.getElementById("Notes").value = "";
@@ -95,7 +100,7 @@ const AddSession = () => {
                     {/* <span className="text-muted">(Leave blank for today)</span> */}
                 </Label><br/>
                 <Input type="date" id="Date" name="Date" onChange={handleChange} 
-                    defaultValue={new Date().toISOString().split('T')[0]}
+                    defaultValue={new Date(today).getFullYear() + '-' + new Date(today).getMonth()+1 + '-' + new Date(today).getDate()}
                 ></Input><br/>
                 <Label for="Minutes" >Minutes:</Label><br/>
                 <Input type="number" step='1' min='0' placeholder='30' id="Minutes" name="Minutes" onChange={handleChange}></Input><br/>
