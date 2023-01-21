@@ -26,11 +26,11 @@ const People = () => {
             ? (
                 <div style={{display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>
                     {people.map(person => (
-                        // <Link key={movie.movie_id} href={`movies/${encodeURIComponent(movie.movie_id.toString())}`} className="text-black text-decoration-none" style={{width:'400px'}}>
-                        <div key={person.person_id} style={{width:'40%', minWidth:'300px', maxWidth:'90%'}}>
-                            <PersonCard  person={person} />
-                        </div>
-                        // </Link>
+                        <Link key={person.person_id} href={`people/${encodeURIComponent(person.person_id.toString())}`} className="text-black text-decoration-none" style={{width:'400px'}}>
+                            <div style={{width:'40%', minWidth:'300px', maxWidth:'90%'}}>
+                                <PersonCard  person={person} />
+                            </div>
+                        </Link>
                         // <>
                         // <h2>{goal.goal_id} - {goal.name}</h2>
                         // <p>{goal.goal}</p>

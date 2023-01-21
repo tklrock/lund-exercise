@@ -50,8 +50,7 @@ const AddSession = () => {
                 date: state.Date,
                 minutes: state.Minutes,
                 category: state.Category,
-                notes: state.Notes,
-                
+                notes: state.Notes
             }).then((response) => {
                 console.log(response.data.results);
             });
