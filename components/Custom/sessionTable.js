@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Button } from 'reactstrap';
+import path from 'path';
 
 export const SessionTable = ({sessions}) => {
 
@@ -33,7 +34,7 @@ export const SessionTable = ({sessions}) => {
                     <td style={{width:'10%', margin:'1%'}}>{session.minutes}</td>
                     <td style={{width:'15%', margin:'1%'}}>{session.category}</td>
                     <td style={{width:'20%', margin:'1%'}}>{session.notes}</td>
-                    <td style={{width:'5%', margin:'1%', fontWeight:'bold'}} className="font-weight-bold h3 text-center"><Link href={`editSession/${session.session_id}`}><Button color="warning"><i className="bi bi-pencil-square"></i></Button></Link></td>
+                    <td style={{width:'5%', margin:'1%', fontWeight:'bold'}} className="font-weight-bold h3 text-center"><Link href={path.join(process.cwd(), `editSession/${session.session_id}`)}><Button color="warning"><i className="bi bi-pencil-square"></i></Button></Link></td>
                     <td style={{width:'5%', margin:'1%', fontWeight:'bold'}} className="font-weight-bold h3 text-center"><Button color="danger" onClick={() => deleteSession(session.session_id)}><i className="bi bi-trash3-fill"></i></Button></td>
                 </tr>
             ))}
