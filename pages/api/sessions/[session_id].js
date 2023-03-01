@@ -2,7 +2,7 @@ import executeQuery from '../db';
 
 export default async function handler(req, res) {
     
-    const { session_id } = req.query
+    const {session_id} = req.query;
     const query = "SELECT * FROM sessions WHERE session_id = ?;";
     const values = [session_id];
     try {

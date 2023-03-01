@@ -15,6 +15,9 @@ export default async function executeQuery(query, values) {
         dbConnection.end();
         return data;
     } catch (error) {
+        dbConnection.end();
         return error;
+    } finally {
+        dbConnection.end();
     }
 }
