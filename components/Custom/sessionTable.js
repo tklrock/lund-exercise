@@ -2,19 +2,16 @@ import Link from 'next/link';
 import { Button } from 'reactstrap';
 import path from 'path';
 
-export const SessionTable = ({sessions}) => {
+export const SessionTable = ({sessions, deleteSession}) => {
 
     return (
         <>
-            <div className="container">
-                <div className="row">
-                    <div className="col-4"><h4>Total sessions: <span className="h3">{sessions?.length}</span></h4></div>
-                    <div className="col-4"><h4>Total time: <span className="h3">{parseInt((sessions?.reduce((accum,session) => accum + session.minutes, 0) / 60), 10)}:{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) % 60).toString().padStart(2, '0')}</span></h4></div>
-                    <div className="col-4"><h4>Average minutes: <span className="h3">{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) / sessions?.length).toFixed(1)}</span></h4></div>
-                    {/* <div className="col-6"><h4>Total Price: ${items.reduce((partialSum, item) => partialSum + parseFloat(item.price), 0).toFixed(2)}</h4></div> */}
-                </div>
+            <div style={{display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>
+                <div style={{flex: '1'}}><h4>Total sessions: <span className="h3">{sessions?.length}</span></h4></div>
+                <div style={{flex: '1'}}><h4>Total time: <span className="h3">{parseInt((sessions?.reduce((accum,session) => accum + session.minutes, 0) / 60), 10)}:{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) % 60).toString().padStart(2, '0')}</span></h4></div>
+                <div style={{flex: '1'}}><h4>Average minutes: <span className="h3">{((sessions?.reduce((accum,session) => accum + session.minutes, 0)) / sessions?.length).toFixed(1)}</span></h4></div>
             </div>
-            <table className="w-100 table table-hover border border-dark border-2 rounded-5">
+            <table className="w-100 table table-hover border border-dark border-2 rounded-5" style={{flex: '3'}}>
                 <thead className="h5 font-weight-bold" style={{height:'20px'}}>
                     <tr className="table-dark">
                         <th style={{width:'10%', margin:'1%'}}>Name</th>
