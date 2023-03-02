@@ -47,8 +47,8 @@ const Person = () => {
                             <h1>{person.first_name}</h1>
                         </div>
                     </div>
-                    <div style={{display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>
-                        <div style={{flex: '1'}}>
+                    <div>
+                        <div>
                             {/* <div className="row">
                                 <img src={person.image_link} className="w-100 rounded-4"/>
                             </div> */}
@@ -57,7 +57,7 @@ const Person = () => {
                                 <p style={{fontSize: '15pt'}}>{person.goal}</p>
                             </div> */}
                         </div>
-                        <div style={{flex: '2'}}>
+                        <div>
                             {sessions?.length > 0  
                                 ? (
                                     <>
