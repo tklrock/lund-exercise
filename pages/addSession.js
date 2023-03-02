@@ -21,9 +21,11 @@ const AddSession = () => {
     const todayMonth = parseInt(new Date(today).getMonth())+1;
     const todayDate = new Date(today).getDate();
 
+    const dateString = todayYear + '-' + ((todayMonth < 10) ? '0': '') + todayMonth +  '-' + ((todayDate < 10) ? '0': '') + todayDate;
+
     const [state, setState] = React.useState({
         Name: "",
-        Date: todayYear + '-' + ((todayMonth < 10) ? '0': '') + todayMonth +  '-' + todayDate,
+        Date: dateString,
         Minutes: 0,
         Category: "",
         Notes: ""
@@ -32,7 +34,6 @@ const AddSession = () => {
     const [successMessage, setSuccessMessage] = React.useState(false);
 
     function handleChange(evt) {
-        // console.log(new Date(today).getFullYear() + '-' + new Date(today).getMonth()+1 + '-' + new Date(today).getDate());
         const value = evt.target.value;
         setState({
           ...state,
@@ -60,13 +61,13 @@ const AddSession = () => {
             });
             setState({
                 Name: "",
-                Date: todayYear + '-' + ((todayMonth < 10) ? '0': '') + todayMonth +  '-' + todayDate,
+                Date: dateString,
                 Minutes: 0,
                 Category: "",
                 Notes: ""
             });
             document.getElementById("Name").value = "";
-            document.getElementById("Date").value = todayYear + '-' + ((todayMonth < 10) ? '0': '') + todayMonth +  '-' + todayDate;
+            document.getElementById("Date").value = dateString;
             document.getElementById("Minutes").value = "";
             document.getElementById("Category").value = "";
             document.getElementById("Notes").value = "";
@@ -103,7 +104,7 @@ const AddSession = () => {
                     {/* <span className="text-muted">(Leave blank for today)</span> */}
                 </Label><br/>
                 <Input type="date" id="Date" name="Date" onChange={handleChange} 
-                    defaultValue={todayYear + '-' + ((todayMonth < 10) ? '0': '') + todayMonth +  '-' + todayDate}
+                    defaultValue={dateString}
                 ></Input><br/>
                 <Label for="Minutes" >Minutes:</Label><br/>
                 <Input type="number" step='1' min='0' placeholder='30' id="Minutes" name="Minutes" onChange={handleChange}></Input><br/>
